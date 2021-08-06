@@ -28,7 +28,9 @@ stages:
       inputs:
         containerRegistry: 'acr'
         repository: 'infymscontainers'
-        command: 'build'
+        command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
-        
+
+
+       
