@@ -10,17 +10,20 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-
+pool:
+     vmImage: MyHostedVM
 stages:
 - stage: Build
   displayName: Build image
   jobs:
   - job: Build
+  
     displayName: Build
     pool: 
       vmImage: MyHostedVM
     steps:
     - task: Docker@2
+    
       displayName: Build an image
       inputs:
         containerRegistry: 'acr'
