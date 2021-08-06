@@ -15,11 +15,8 @@ variables:
 stages:
 - stage: Build
   displayName: Build image
-  pool:
-     vmImage: MyHostedVM
   jobs:
   - job: Build
-  
     displayName: Build
     pool: 
       vmImage: MyHostedVM
