@@ -19,7 +19,7 @@ stages:
   - job: Build
     displayName: Build
     pool: 
-      vmImage: MyHostedVM
+      name: MyHostedVM
     steps:
     - task: Docker@2
     
