@@ -10,11 +10,12 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-pool:
-     vmImage: MyHostedVM
+
 stages:
 - stage: Build
   displayName: Build image
+  pool:
+     vmImage: MyHostedVM
   jobs:
   - job: Build
   
